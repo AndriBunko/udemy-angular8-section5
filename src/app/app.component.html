@@ -1,8 +1,23 @@
 <div>
   <h1>Angular Pipes</h1>
-  <!--  <p>{{e | number:'1.1-5'}}</p>-->
-  <!--  <p>{{e | number:'3.1-2'}}</p>-->
-  <!--  <p>{{e | number:'1.0-0'}}</p>-->
+
+  <button class="btn" (click)="searchFiled = 'title'">Title</button>
+  <button class="btn" (click)="searchFiled = 'text'">Text</button>
+
+  <input type="text" [(ngModel)]="search">
+  <div *ngFor="let post of posts | filter: search:searchFiled" class="card">
+
+    <h2>{{post.title}}</h2>
+    <p>{{post.text}}</p>
+  </div>
+</div>
+
+<!--
+<div>
+  <h1>Angular Pipes</h1>
+  &lt;!&ndash;  <p>{{e | number:'1.1-5'}}</p>&ndash;&gt;
+  &lt;!&ndash;  <p>{{e | number:'3.1-2'}}</p>&ndash;&gt;
+  &lt;!&ndash;  <p>{{e | number:'1.0-0'}}</p>&ndash;&gt;
   <p>{{str | uppercase | lowercase | titlecase}}</p>
   <p>{{str | titlecase | slice:1:-2}}</p>
 
@@ -19,9 +34,10 @@
   <p>{{10 | mult:5}}</p>
   <p>{{10 | mult:8}}</p>
   <p>{{10 | mult:13}}</p>
-`
+` q
 
 
   <p>{{'hello world            ' | exMarks}}</p>
 
 </div>
+-->
