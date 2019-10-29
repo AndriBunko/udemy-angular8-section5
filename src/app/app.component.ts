@@ -13,21 +13,21 @@ export interface Post {
 export class AppComponent {
   title = 'angular-basic-section5';
 
-/*  e: number = Math.E;
-  str = 'hello world';
-  date: Date = new Date();
-  float = 0.42;
+  /*  e: number = Math.E;
+    str = 'hello world';
+    date: Date = new Date();
+    float = 0.42;
 
-  obj = {
-    a: 1,
-    b: {
-      c: 2,
-      d: {
-        e: 3,
-        f: 4
+    obj = {
+      a: 1,
+      b: {
+        c: 2,
+        d: {
+          e: 3,
+          f: 4
+        }
       }
-    }
-  };*/
+    };*/
   search = '';
   searchFiled = 'title';
   posts: Post[] = [
@@ -37,4 +37,10 @@ export class AppComponent {
   ];
 
 
+  addPost() {
+    this.posts.unshift({
+      title: 'Angular 8',
+      text: 'Udemy angular 8 cource'}
+      );
+  }
 }

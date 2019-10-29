@@ -4,6 +4,10 @@
   <button class="btn" (click)="searchFiled = 'title'">Title</button>
   <button class="btn" (click)="searchFiled = 'text'">Text</button>
 
+  <hr>
+
+  <button class="btn" (click)="addPost()">Добавить новий пост</button>
+
   <input type="text" [(ngModel)]="search">
   <div *ngFor="let post of posts | filter: search:searchFiled" class="card">
 
